@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://isung.github.io/"/>
-  <updated>2016-07-11T06:00:57.012Z</updated>
+  <updated>2016-07-11T07:17:28.389Z</updated>
   <id>http://isung.github.io/</id>
   
   <author>
@@ -16,30 +16,65 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello Bolg</title>
-    <link href="http://isung.github.io/2016/07/11/Hello-Bolg/"/>
-    <id>http://isung.github.io/2016/07/11/Hello-Bolg/</id>
-    <published>2016-07-11T05:48:23.000Z</published>
-    <updated>2016-07-11T06:00:57.012Z</updated>
+    <title>hexo在github上搭建个人博客-初始篇</title>
+    <link href="http://isung.github.io/2016/07/11/hexo%E5%9C%A8github%E4%B8%8A%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-%E5%88%9D%E5%A7%8B%E7%AF%87/"/>
+    <id>http://isung.github.io/2016/07/11/hexo在github上搭建个人博客-初始篇/</id>
+    <published>2016-07-11T06:14:11.000Z</published>
+    <updated>2016-07-11T07:17:28.389Z</updated>
     
-    <content type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;多学一点知识，少写几行代码。&lt;/blockquote&gt;
-
-&lt;p&gt;因工作中很多知识点因记忆力不好被遗忘，特地新建个bolg，来梳理平时日常工作中学到的知识点。&lt;/p&gt;
+    <content type="html">&lt;p&gt;工欲善其事,必先利其器。要搭建好bolg,适合的工具是必不可少的,如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;http://nodejs.cn/download/&quot; title=&quot;node.js&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;node.js&lt;/a&gt;&lt;/strong&gt; &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://git-scm.com/downloads/&quot; title=&quot;git&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;git&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;准备工作就绪后，打开&lt;strong&gt;Git&lt;/strong&gt;使用npm命令安装hexo&lt;/p&gt;
+&lt;figure class=&quot;highlight cmd&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;$ npm install -g hexo-cli&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;hexo如果安装失败，请使用如下命令：&lt;br&gt;&lt;figure class=&quot;highlight cmd&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;$ sudo npm install -g hexo-cli&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Mac 用户&lt;/strong&gt;&lt;br&gt;您在编译时可能会遇到问题，请先到 App Store 安装 Xcode，Xcode 完成后，启动并进入 &lt;strong&gt;Preferences -&amp;gt; Download -&amp;gt; Command Line Tools -&amp;gt; Install&lt;/strong&gt; 安装命令行工具。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;安装hexo完成后，新建文件夹，右键选择&lt;strong&gt;Git Bash here&lt;/strong&gt;，使用如下命令：&lt;br&gt;&lt;figure class=&quot;highlight cmd&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;$ hexo init // 将hexo下载到指定文件夹&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight cmd&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;$ npm install //安装依赖&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;hexo下完完成后，目录结构如下：&lt;br&gt;&lt;figure class=&quot;highlight cmd&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;├── _config.yml&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;├── package.json&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;├── scaffolds&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;├── source&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;|   ├── _drafts&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;|   └── _posts&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;└── themes&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&quot;config-yml&quot;&gt;&lt;a href=&quot;#config-yml&quot; class=&quot;headerlink&quot; title=&quot;_config.yml&quot;&gt;&lt;/a&gt;_config.yml&lt;/h3&gt;&lt;p&gt;网站的配置信息，可以配置大部分参数，具体配置信息参考官网文档：&lt;a href=&quot;https://hexo.io/zh-cn/docs/configuration.html/&quot; title=&quot;配置&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;配置&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;package-json&quot;&gt;&lt;a href=&quot;#package-json&quot; class=&quot;headerlink&quot; title=&quot;package.json&quot;&gt;&lt;/a&gt;package.json&lt;/h3&gt;&lt;p&gt;应用程序的信息。EJS, Stylus 和 Markdown renderer 已默认安装，您可以自由移除。&lt;br&gt;&lt;figure class=&quot;highlight cmd&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;17&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;18&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;19&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;20&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;package.json&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &quot;name&quot;: &quot;hexo-site&quot;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &quot;version&quot;: &quot;&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;&quot;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &quot;private&quot;: true,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &quot;hexo&quot;: &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &quot;version&quot;: &quot;&quot;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &amp;#125;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &quot;dependencies&quot;: &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &quot;hexo&quot;: &quot;^&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;&quot;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &quot;hexo-generator-archive&quot;: &quot;^&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;&quot;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &quot;hexo-generator-category&quot;: &quot;^&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;&quot;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &quot;hexo-generator-index&quot;: &quot;^&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;&quot;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &quot;hexo-generator-tag&quot;: &quot;^&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;&quot;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &quot;hexo-renderer-ejs&quot;: &quot;^&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;&quot;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &quot;hexo-renderer-stylus&quot;: &quot;^&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;&quot;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &quot;hexo-renderer-marked&quot;: &quot;^&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;&quot;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &quot;hexo-server&quot;: &quot;^&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&quot;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&quot;scaffolds&quot;&gt;&lt;a href=&quot;#scaffolds&quot; class=&quot;headerlink&quot; title=&quot;scaffolds&quot;&gt;&lt;/a&gt;scaffolds&lt;/h3&gt;&lt;p&gt;模版 文件夹。当您新建文章时，Hexo 会根据 scaffold 来建立文件，我们可以更改模版文件，以便生成我们自己想要的模版。&lt;/p&gt;
+&lt;h3 id=&quot;source&quot;&gt;&lt;a href=&quot;#source&quot; class=&quot;headerlink&quot; title=&quot;source&quot;&gt;&lt;/a&gt;source&lt;/h3&gt;&lt;p&gt;资源文件夹是存放用户资源的地方。除 &lt;em&gt;posts 文件夹之外，开头命名为 &lt;/em&gt; (下划线)的文件 / 文件夹和隐藏的文件将会被忽略。Markdown 和 HTML 文件会被解析并放到 public 文件夹，而其他文件会被拷贝过去。&lt;/p&gt;
+&lt;h3 id=&quot;themes&quot;&gt;&lt;a href=&quot;#themes&quot; class=&quot;headerlink&quot; title=&quot;themes&quot;&gt;&lt;/a&gt;themes&lt;/h3&gt;&lt;p&gt;主题 文件夹。Hexo 会根据主题来生成静态页面。&lt;/p&gt;
+&lt;h3 id=&quot;hexo常用命令&quot;&gt;&lt;a href=&quot;#hexo常用命令&quot; class=&quot;headerlink&quot; title=&quot;hexo常用命令&quot;&gt;&lt;/a&gt;hexo常用命令&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;下载hexo到指定文件夹&lt;/p&gt;
+&lt;figure class=&quot;highlight cmd&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;$ hexo init&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;新建文章&lt;/p&gt;
+&lt;figure class=&quot;highlight cmd&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;$ hexo new &quot;hello wolrd&quot; //会在hexo\source\_posts目录下生成hello wolrd.&lt;span class=&quot;built_in&quot;&gt;md&lt;/span&gt;文件 &lt;span class=&quot;built_in&quot;&gt;md&lt;/span&gt;是指Markdown&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;编译文章，生成静态页&lt;/p&gt;
+&lt;figure class=&quot;highlight cmd&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;$ hexo g&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;启动服务&lt;/p&gt;
+&lt;figure class=&quot;highlight cmd&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;$ hexo s //可通过localhost:&lt;span class=&quot;number&quot;&gt;4000&lt;/span&gt;访问站点&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;提交到github&lt;/p&gt;
+&lt;figure class=&quot;highlight cmd&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;$ hexo d&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;清除缓存&lt;/p&gt;
+&lt;figure class=&quot;highlight cmd&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;$ hexo clean&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 </content>
     
     <summary type="html">
     
-      &lt;blockquote class=&quot;blockquote-center&quot;&gt;多学一点知识，少写几行代码。&lt;/blockquote&gt;
-
-&lt;p&gt;因工作中很多知识点因记忆力不好被遗忘，特地新建个bolg，来梳理平时日常工作中学到的知识点。&lt;/p&gt;
-
+      &lt;p&gt;工欲善其事,必先利其器。要搭建好bolg,适合的工具是必不可少的,如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;http://nodejs.cn/download/&quot; title=&quot;node.js&quot; target=&quot;_blank&quot; rel=&quot;exter
     
     </summary>
     
-      <category term="闲言杂语" scheme="http://isung.github.io/categories/%E9%97%B2%E8%A8%80%E6%9D%82%E8%AF%AD/"/>
+      <category term="blog" scheme="http://isung.github.io/categories/blog/"/>
     
     
-      <category term="Blog" scheme="http://isung.github.io/tags/Blog/"/>
+      <category term="hexo" scheme="http://isung.github.io/tags/hexo/"/>
     
   </entry>
   
