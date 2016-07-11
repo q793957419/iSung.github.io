@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://isung.github.io/"/>
-  <updated>2016-07-11T07:26:54.736Z</updated>
+  <updated>2016-07-11T07:29:40.496Z</updated>
   <id>http://isung.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://isung.github.io/2016/07/11/hexo%E5%9C%A8github%E4%B8%8A%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-%E5%88%9D%E5%A7%8B%E7%AF%87/"/>
     <id>http://isung.github.io/2016/07/11/hexo在github上搭建个人博客-初始篇/</id>
     <published>2016-07-11T06:14:11.000Z</published>
-    <updated>2016-07-11T07:26:54.736Z</updated>
+    <updated>2016-07-11T07:29:40.496Z</updated>
     
     <content type="html">&lt;p&gt;工欲善其事,必先利其器。要搭建好bolg,适合的工具是必不可少的,如下：&lt;/p&gt;
 &lt;ul&gt;
@@ -29,6 +29,7 @@
 &lt;/ul&gt;
 &lt;p&gt;准备工作就绪后，打开&lt;strong&gt;Git&lt;/strong&gt;使用npm命令安装hexo&lt;/p&gt;
 &lt;figure class=&quot;highlight cmd&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;$ npm install -g hexo-cli&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;p&gt;hexo如果安装失败，请使用如下命令：&lt;br&gt;&lt;figure class=&quot;highlight cmd&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;$ sudo npm install -g hexo-cli&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Mac 用户&lt;/strong&gt;&lt;br&gt;您在编译时可能会遇到问题，请先到 App Store 安装 Xcode，Xcode 完成后，启动并进入 &lt;strong&gt;Preferences -&amp;gt; Download -&amp;gt; Command Line Tools -&amp;gt; Install&lt;/strong&gt; 安装命令行工具。&lt;/p&gt;
@@ -67,7 +68,11 @@
     
       &lt;p&gt;工欲善其事,必先利其器。要搭建好bolg,适合的工具是必不可少的,如下：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;http://nodejs.cn/download/&quot; title=&quot;node.js&quot; target=&quot;_blank&quot; rel=&quot;exter
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;http://nodejs.cn/download/&quot; title=&quot;node.js&quot;&gt;node.js&lt;/a&gt;&lt;/strong&gt; &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://git-scm.com/downloads/&quot; title=&quot;Git&quot;&gt;Git&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;准备工作就绪后，打开&lt;strong&gt;Git&lt;/strong&gt;使用npm命令安装hexo&lt;/p&gt;
+&lt;figure class=&quot;highlight cmd&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;$ npm install -g hexo-cli&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     

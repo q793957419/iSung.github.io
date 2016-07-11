@@ -319,48 +319,18 @@
 
       
         
-          
-            <p>工欲善其事,必先利其器。要搭建好bolg,适合的工具是必不可少的,如下：</p>
+          <p>工欲善其事,必先利其器。要搭建好bolg,适合的工具是必不可少的,如下：</p>
 <ul>
-<li><strong><a href="http://nodejs.cn/download/" title="node.js" target="_blank" rel="external">node.js</a></strong> </li>
-<li><strong><a href="https://git-scm.com/downloads/" title="Git" target="_blank" rel="external">Git</a></strong></li>
+<li><strong><a href="http://nodejs.cn/download/" title="node.js">node.js</a></strong> </li>
+<li><strong><a href="https://git-scm.com/downloads/" title="Git">Git</a></strong></li>
 </ul>
 <p>准备工作就绪后，打开<strong>Git</strong>使用npm命令安装hexo</p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install -g hexo-cli</div></pre></td></tr></table></figure>
-<p>hexo如果安装失败，请使用如下命令：<br><figure class="highlight cmd"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo npm install -g hexo-cli</div></pre></td></tr></table></figure></p>
-<blockquote>
-<p><strong>Mac 用户</strong><br>您在编译时可能会遇到问题，请先到 App Store 安装 Xcode，Xcode 完成后，启动并进入 <strong>Preferences -&gt; Download -&gt; Command Line Tools -&gt; Install</strong> 安装命令行工具。</p>
-</blockquote>
-<p>安装hexo完成后，新建文件夹，右键选择<strong>Git Bash here</strong>，使用如下命令：<br><figure class="highlight cmd"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo init // 将hexo下载到指定文件夹</div></pre></td></tr></table></figure></p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install //安装依赖</div></pre></td></tr></table></figure>
-<p>hexo下完完成后，目录结构如下：<br><figure class="highlight cmd"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">├── _config.yml</div><div class="line">├── package.json</div><div class="line">├── scaffolds</div><div class="line">├── source</div><div class="line">|   ├── _drafts</div><div class="line">|   └── _posts</div><div class="line">└── themes</div></pre></td></tr></table></figure></p>
-<h3 id="config-yml"><a href="#config-yml" class="headerlink" title="_config.yml"></a>_config.yml</h3><p>网站的配置信息，可以配置大部分参数，具体配置信息参考官网文档：<a href="https://hexo.io/zh-cn/docs/configuration.html/" title="配置" target="_blank" rel="external">配置</a></p>
-<h3 id="package-json"><a href="#package-json" class="headerlink" title="package.json"></a>package.json</h3><p>应用程序的信息。EJS, Stylus 和 Markdown renderer 已默认安装，您可以自由移除。<br><figure class="highlight cmd"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">package.json</div><div class="line">&#123;</div><div class="line">  "name": "hexo-site",</div><div class="line">  "version": "<span class="number">0</span>.<span class="number">0</span>.<span class="number">0</span>",</div><div class="line">  "private": true,</div><div class="line">  "hexo": &#123;</div><div class="line">    "version": ""</div><div class="line">  &#125;,</div><div class="line">  "dependencies": &#123;</div><div class="line">    "hexo": "^<span class="number">3</span>.<span class="number">0</span>.<span class="number">0</span>",</div><div class="line">    "hexo-generator-archive": "^<span class="number">0</span>.<span class="number">1</span>.<span class="number">0</span>",</div><div class="line">    "hexo-generator-category": "^<span class="number">0</span>.<span class="number">1</span>.<span class="number">0</span>",</div><div class="line">    "hexo-generator-index": "^<span class="number">0</span>.<span class="number">1</span>.<span class="number">0</span>",</div><div class="line">    "hexo-generator-tag": "^<span class="number">0</span>.<span class="number">1</span>.<span class="number">0</span>",</div><div class="line">    "hexo-renderer-ejs": "^<span class="number">0</span>.<span class="number">1</span>.<span class="number">0</span>",</div><div class="line">    "hexo-renderer-stylus": "^<span class="number">0</span>.<span class="number">2</span>.<span class="number">0</span>",</div><div class="line">    "hexo-renderer-marked": "^<span class="number">0</span>.<span class="number">2</span>.<span class="number">4</span>",</div><div class="line">    "hexo-server": "^<span class="number">0</span>.<span class="number">1</span>.<span class="number">2</span>"</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h3 id="scaffolds"><a href="#scaffolds" class="headerlink" title="scaffolds"></a>scaffolds</h3><p>模版 文件夹。当您新建文章时，Hexo 会根据 scaffold 来建立文件，我们可以更改模版文件，以便生成我们自己想要的模版。</p>
-<h3 id="source"><a href="#source" class="headerlink" title="source"></a>source</h3><p>资源文件夹是存放用户资源的地方。除 <em>posts 文件夹之外，开头命名为 </em> (下划线)的文件 / 文件夹和隐藏的文件将会被忽略。Markdown 和 HTML 文件会被解析并放到 public 文件夹，而其他文件会被拷贝过去。</p>
-<h3 id="themes"><a href="#themes" class="headerlink" title="themes"></a>themes</h3><p>主题 文件夹。Hexo 会根据主题来生成静态页面。</p>
-<h3 id="hexo常用命令"><a href="#hexo常用命令" class="headerlink" title="hexo常用命令"></a>hexo常用命令</h3><ul>
-<li><p>下载hexo到指定文件夹</p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo init</div></pre></td></tr></table></figure>
-</li>
-<li><p>新建文章</p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new "hello wolrd" //会在hexo\source\_posts目录下生成hello wolrd.<span class="built_in">md</span>文件 <span class="built_in">md</span>是指Markdown</div></pre></td></tr></table></figure>
-</li>
-<li><p>编译文章，生成静态页</p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo g</div></pre></td></tr></table></figure>
-</li>
-<li><p>启动服务</p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo s //可通过localhost:<span class="number">4000</span>访问站点</div></pre></td></tr></table></figure>
-</li>
-<li><p>提交到github</p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo d</div></pre></td></tr></table></figure>
-</li>
-<li><p>清除缓存</p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo clean</div></pre></td></tr></table></figure>
-</li>
-</ul>
-
-          
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/07/11/hexo在github上搭建个人博客-初始篇/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
