@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://isung.github.io/"/>
-  <updated>2016-07-11T07:29:40.496Z</updated>
+  <updated>2016-07-11T08:53:43.016Z</updated>
   <id>http://isung.github.io/</id>
   
   <author>
@@ -16,11 +16,60 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>hexo在github上搭建个人博客-github篇</title>
+    <link href="http://isung.github.io/2016/07/11/hexo%E5%9C%A8github%E4%B8%8A%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-github%E7%AF%87/"/>
+    <id>http://isung.github.io/2016/07/11/hexo在github上搭建个人博客-github篇/</id>
+    <published>2016-07-11T07:37:05.000Z</published>
+    <updated>2016-07-11T08:53:43.016Z</updated>
+    
+    <content type="html">&lt;p&gt;首先需要注册一个&lt;strong&gt;github&lt;/strong&gt;帐号，如果你拥有github帐号即可免去此步骤。&lt;/p&gt;
+&lt;p&gt;注册完成后，我们先新建一个版本库。&lt;strong&gt;New repository&lt;/strong&gt;，版本库名称必须以&lt;strong&gt;userName.github.io&lt;/strong&gt;这种格式，然后创建版本库&lt;strong&gt;Create repository&lt;/strong&gt;。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;配置ssh&quot;&gt;&lt;a href=&quot;#配置ssh&quot; class=&quot;headerlink&quot; title=&quot;配置ssh&quot;&gt;&lt;/a&gt;配置ssh&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;检查ssh是否存在，先使用如下命令：&lt;/p&gt;
+&lt;figure class=&quot;highlight cmd&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;$ &lt;span class=&quot;built_in&quot;&gt;cd&lt;/span&gt; ~/.ssh&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;创建ssh key&lt;/p&gt;
+&lt;figure class=&quot;highlight cmd&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;$ ssh-keygen -t rsa -C &quot;your_email@example.com&quot; //邮箱地址填写自己的&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;将ssh添加至github&lt;/p&gt;
+&lt;figure class=&quot;highlight cmd&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;$ clip &amp;lt; ~/.ssh/id_rsa.pub //赋值ssh key&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;登录github，找到&lt;strong&gt;Settings&lt;/strong&gt;中的&lt;strong&gt;SSH and GPG keys&lt;/strong&gt;，新建一个ssh key,&lt;strong&gt;New SSH Key&lt;/strong&gt;，title为ssh key名称，key为ssh key值。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;测试ssh是否添加成功&lt;figure class=&quot;highlight cmd&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;$ sh -T git@github.com&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&quot;部署到github&quot;&gt;&lt;a href=&quot;#部署到github&quot; class=&quot;headerlink&quot; title=&quot;部署到github&quot;&gt;&lt;/a&gt;部署到github&lt;/h3&gt;&lt;p&gt;需要配置&lt;strong&gt;_config.yml&lt;/strong&gt;中的参数，格式如下：&lt;br&gt;&lt;figure class=&quot;highlight cmd&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;deploy: &lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;title&quot;&gt;type&lt;/span&gt;: &lt;span class=&quot;title&quot;&gt;git&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;title&quot;&gt;repo&lt;/span&gt;: &lt;span class=&quot;title&quot;&gt;git&lt;/span&gt;@&lt;span class=&quot;title&quot;&gt;github.com:iSung&lt;/span&gt;/&lt;span class=&quot;title&quot;&gt;iSung.github.io.git&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;title&quot;&gt;branch&lt;/span&gt;: &lt;span class=&quot;title&quot;&gt;master&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;安装&lt;strong&gt;hexo-deployer-git&lt;/strong&gt;&lt;br&gt;&lt;figure class=&quot;highlight cmd&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;$ npm install hexo-deployer-git --save&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;部署步骤如下：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;hexo g&lt;/li&gt;
+&lt;li&gt;hexo clean&lt;/li&gt;
+&lt;li&gt;hexo d&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;首先需要注册一个&lt;strong&gt;github&lt;/strong&gt;帐号，如果你拥有github帐号即可免去此步骤。&lt;/p&gt;
+&lt;p&gt;注册完成后，我们先新建一个版本库。&lt;strong&gt;New repository&lt;/strong&gt;，版本库名称必须以&lt;strong&gt;userName.github.io&lt;/strong&gt;这种格式，然后创建版本库&lt;strong&gt;Create repository&lt;/strong&gt;。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="hexo" scheme="http://isung.github.io/categories/hexo/"/>
+    
+    
+      <category term="hexo" scheme="http://isung.github.io/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
     <title>hexo在github上搭建个人博客-初始篇</title>
     <link href="http://isung.github.io/2016/07/11/hexo%E5%9C%A8github%E4%B8%8A%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-%E5%88%9D%E5%A7%8B%E7%AF%87/"/>
     <id>http://isung.github.io/2016/07/11/hexo在github上搭建个人博客-初始篇/</id>
     <published>2016-07-11T06:14:11.000Z</published>
-    <updated>2016-07-11T07:29:40.496Z</updated>
+    <updated>2016-07-11T07:40:59.376Z</updated>
     
     <content type="html">&lt;p&gt;工欲善其事,必先利其器。要搭建好bolg,适合的工具是必不可少的,如下：&lt;/p&gt;
 &lt;ul&gt;
@@ -76,7 +125,7 @@
     
     </summary>
     
-      <category term="blog" scheme="http://isung.github.io/categories/blog/"/>
+      <category term="hexo" scheme="http://isung.github.io/categories/hexo/"/>
     
     
       <category term="hexo" scheme="http://isung.github.io/tags/hexo/"/>
